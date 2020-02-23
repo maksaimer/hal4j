@@ -70,6 +70,10 @@ public abstract class ResourceBuilderSupport<R extends ResourceSupport, B extend
         return linkSelf().to(builder);
     }
 
+    public B toAll(HALLinkBuilder... builders) {
+        return linkSelf().toAll(builders);
+    }
+
     public Linker link(URI rel) {
         return new Linker(rel);
     }

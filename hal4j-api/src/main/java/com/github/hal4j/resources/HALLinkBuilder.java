@@ -3,6 +3,7 @@ package com.github.hal4j.resources;
 import java.net.URI;
 import java.net.URISyntaxException;
 
+import static com.github.hal4j.resources.HALLink.SAME_RESOURCE;
 import static java.util.Optional.ofNullable;
 
 public class HALLinkBuilder implements Builder<HALLink> {
@@ -22,6 +23,10 @@ public class HALLinkBuilder implements Builder<HALLink> {
 
     public static HALLinkBuilder alt(String name) {
         return new HALLinkBuilder().name(name);
+    }
+
+    public static HALLinkBuilder same() {
+        return uri(SAME_RESOURCE);
     }
 
     public static HALLinkBuilder basedOn(HALLink link) {

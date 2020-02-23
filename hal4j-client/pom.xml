@@ -1,0 +1,63 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.github.hal4j</groupId>
+        <artifactId>hal4j-parent</artifactId>
+        <version>0.10.1-SNAPSHOT</version>
+	</parent>
+
+    <artifactId>hal4j-client</artifactId>
+    <packaging>jar</packaging>
+
+    <name>HAL API Client</name>
+    <description>Generic client for HAL APIs</description>
+
+    <properties>
+        <http-client.version>4.5.9</http-client.version>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.github.hal4j</groupId>
+            <artifactId>hal4j-jackson</artifactId>
+        </dependency>
+
+        <!-- JacksonHALMapper serialization -->
+        <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/fluent-hc -->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>fluent-hc</artifactId>
+            <version>${http-client.version}</version>
+        </dependency>
+
+        <!-- logging -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- test dependencies -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+</project>
